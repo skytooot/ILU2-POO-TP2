@@ -10,7 +10,9 @@ public class ControlVerifierIdentite {
 	}
 
 	public boolean verifierIdentite(String nomVendeur) {
-		//TODO a completer, attention le retour ne dit pas etre false :-)
-		return village.trouverHabitant(nomVendeur).getNom() != null;
+		if(village.trouverHabitant(nomVendeur) == null) {
+			return false;
+		}
+		return true;
 	}
 }
