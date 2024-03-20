@@ -20,6 +20,14 @@ public class ControlAcheterProduit {
 	public boolean verifierIdentite(String nomAcheteur) {
 		return controlVerifierIdentite.verifierIdentite(nomAcheteur);
 	}
+	
+	public String[] donnerVendeurProduit(String produit) {
+		String[] str = null;
+		//faire un tableau avec le nom des vendeurs qui vendent le produit
+		//puis plus tard faire en sorte de retrouver les étals via le nom des vendeurs du tableau
+		return str;
+	}
+	
 	//pas ouf
 	public String[] donnerInfosMarche() {
 		return village.donnerEtatMarche();
