@@ -24,14 +24,17 @@ public class ControlAcheterProduit {
 	
 	public String[] donnerVendeurProduit(String produit) {
 		Gaulois[] tabGaulois = village.rechercherVendeursProduit(produit);
-		String[] str = null;
-		for(int i=0; i<tabGaulois.length;i++) {
-			str[i] = tabGaulois[i].getNom();
-			//System.out.println(str[i]+"\n");
+		if(tabGaulois != null) {
+			String[] str = new String[tabGaulois.length];
+			for(int i=0; i<tabGaulois.length;i++) {
+				str[i] = tabGaulois[i].getNom();
+				//System.out.println(str[i]+"\n");
+			}
+			return str;
 		}
 		//faire un tableau avec le nom des vendeurs qui vendent le produit
 		//puis plus tard faire en sorte de retrouver les étals via le nom des vendeurs du tableau
-		return str;
+		return null;
 	}
 	
 	

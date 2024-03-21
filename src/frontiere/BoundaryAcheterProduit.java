@@ -22,7 +22,6 @@ public class BoundaryAcheterProduit {
 			System.out.println("Quel produit voulez-vous acheter ?\n");
 			Scanner sc = new Scanner(System.in);
 			String produit = sc.nextLine();
-			sc.close();
 			String[] vendeurs = controlAcheterProduit.donnerVendeurProduit(produit);
 			if(vendeurs == null) {
 				System.out.println("Désolé, personne ne vend ce produit au marché.\n");
@@ -33,6 +32,10 @@ public class BoundaryAcheterProduit {
 					question.append((i+1)+" - "+vendeurs[i]+"\n");
 				}
 				int numVendeur = Clavier.entrerEntier(question.toString());
+				while(numVendeur <1 | numVendeur>vendeurs.length) {
+					System.out.println("Vous devez choisir un nombre entre 1 et "+vendeurs.length);
+					numVendeur = Clavier.entrerEntier(question.toString());
+				}
 				System.out.println(nomAcheteur+" se déplace jusqu'à l'étal du vendeur "+vendeurs[numVendeur-1]);
 				StringBuilder combien = new StringBuilder("Bonjour "+nomAcheteur+"\nCombien de "+produit+
 						" voulez-vous acheter ?\n");
