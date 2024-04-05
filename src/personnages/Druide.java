@@ -31,8 +31,8 @@ public class Druide extends Gaulois {
 	}
 
 	public void booster(Gaulois gaulois) {
-		if (gaulois.getNom().equals("ObÃ©lix")) {
-			parler("Non, ObÃ©lix !... Tu n'auras pas de potion magique !");
+		if (gaulois.getNom().equals("Obélix")) {
+			parler("Non, Obélix !... Tu n'auras pas de potion magique !");
 		} else {
 			gaulois.boirePotion(forcePotion);
 		}

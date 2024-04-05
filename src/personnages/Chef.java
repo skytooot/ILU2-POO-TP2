@@ -12,7 +12,7 @@ public class Chef extends Gaulois {
 
 	@Override
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "Â« " + texte + "Â»");
+		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 
 	@Override

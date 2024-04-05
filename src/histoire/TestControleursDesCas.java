@@ -18,7 +18,7 @@ public class TestControleursDesCas {
 
 		//TODO decommenter les cas au fur et a mesure que vous avancez dans le TP
 		
-		Village village = new Village("le village des irrÃ©ductibles", 10, 5);
+		Village village = new Village("le village des irréductibles", 10, 5);
 		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Asterix", 6);
@@ -42,7 +42,7 @@ public class TestControleursDesCas {
 		
 //		Sortie Console :
 //		Cas 2 : Emmenager
-//		Le druide Panoramix : Â« Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 Ã  7.Â»
+//		Le druide Panoramix : Â« Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 à  7.Â»
 //		Les villageois sont : 
 //		- Abraracourcix
 //		- le druide Panoramix
@@ -73,11 +73,11 @@ public class TestControleursDesCas {
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
 				controlVerifierIdentite, village);
 		int numeroEtal = controlPrendreEtal.prendreEtal("Obelix", "fleur", 5);
-		System.out.println("Obelix a pris l'Ã©tal nÂ°" + numeroEtal);
+		System.out.println("Obelix a pris l'étal n°" + numeroEtal);
 
 //		Sortie Console :
 //		Cas 4 : Prendre etal
-//		Obelix a pris l'Ã©tal nÂ°1
+//		Obelix a pris l'étal nÂ°1
 
 
 		// Cas 5 : trouverEtalVendeur
@@ -90,24 +90,24 @@ public class TestControleursDesCas {
 				.trouverEtalVendeur("Obelix");
 		Etal etalIntrus = controlTrouverEtalVendeur
 				.trouverEtalVendeur("Intrus");
-		System.out.print("L'Ã©tal d'ObÃ©lix");
+		System.out.print("L'étal d'Obélix");
 		if (etalObelix != null) {
-			System.out.println(" est trouvÃ©");
+			System.out.println(" est trouvé");
 		} else {
-			System.out.println(" n'est pas trouvÃ©");
+			System.out.println(" n'est pas trouvé");
 		}
-		System.out.print("L'Ã©tal de Intrus");
+		System.out.print("L'étal de Intrus");
 		if (etalIntrus != null) {
-			System.out.println(" est trouvÃ©");
+			System.out.println(" est trouvé");
 		} else {
-			System.out.println(" n'est pas trouvÃ©");
+			System.out.println(" n'est pas trouvé");
 		}
 		
 
 //		Sortie Console :
 //		Cas 5 : trouver etal vendeur
-//		L'Ã©tal d'ObÃ©lix est trouvÃ©
-//		L'Ã©tal de Intrus n'est pas trouvÃ©
+//		L'étal d'Obélix est trouvé
+//		L'étal de Intrus n'est pas trouvé
 
 
 		// Cas 6 : libererEtal
@@ -118,12 +118,12 @@ public class TestControleursDesCas {
 				controlTrouverEtalVendeur);
 		String[] ventesObelix = controlLibererEtal.libererEtal("Obelix");
 		System.out.println("Les ventes d'Obelix : ");
-		System.out.println("[0] : un boolean indiquant si l'Ã©tal est occupÃ© ");
+		System.out.println("[0] : un boolean indiquant si l'étal est occupé ");
 		System.out.println("[1] : nom du vendeur");
 		System.out.println("[2] : produit vendu");
 		System.out.println(
-				"[3] : quantitÃ© de produit Ã  vendre au dÃ©but du marchÃ©");
-		System.out.println("[4] : quantitÃ© de produit vendu");
+				"[3] : quantité de produit à  vendre au début du marché");
+		System.out.println("[4] : quantité de produit vendu");
 		for (String string : ventesObelix) {
 			System.out.println(string);
 		}
@@ -134,11 +134,11 @@ public class TestControleursDesCas {
 //		Sortie Console :
 //		Cas 6 : Liberer etal
 //		Les ventes d'Obelix : 
-//		[0] : un boolean indiquant si l'Ã©tal est occupÃ© 
+//		[0] : un boolean indiquant si l'étal est occupé 
 //		[1] : nom du vendeur
 //		[2] : produit vendu
-//		[3] : quantitÃ© de produit Ã  vendre au dÃ©but du marchÃ©
-//		[4] : quantitÃ© de produit vendu
+//		[3] : quantité de produit à  vendre au début du marché
+//		[4] : quantité de produit vendu
 //		true
 //		Obelix
 //		fleur
@@ -182,6 +182,10 @@ public class TestControleursDesCas {
 		nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix", 3);
 		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
 		
+		nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix", 3);
+		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
+		nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix", 3);
+		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
 
 //		Sortie Console :
 //		Cas 8 : Acheter Produit

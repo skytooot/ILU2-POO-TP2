@@ -6,6 +6,10 @@ public class Gaulois extends Personnage {
 	public Gaulois(String nom, int force) {
 		super(nom, force);
 	}
+	
+	public int getForce() {
+		return this.force * this.effetPotion;
+	}
 
 	@Override
 	protected String prendreParole() {

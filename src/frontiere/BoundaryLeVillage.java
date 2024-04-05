@@ -67,8 +67,8 @@ public class BoundaryLeVillage {
 		do {
 			StringBuilder question = new StringBuilder();
 			question.append(
-					"1 - je souhaite que vous me prÃ©sentiez votre village.\n");
-			question.append("2 - je voudrais emmÃ©nager dans votre village.\n");
+					"1 - je souhaite que vous me présentiez votre village.\n");
+			question.append("2 - je voudrais emménager dans votre village.\n");
 			question.append("3 - quitter l'application.");
 			choixUtilisateur = Clavier.entrerEntier(question.toString());
 			switch (choixUtilisateur) {
@@ -93,8 +93,8 @@ public class BoundaryLeVillage {
 		int choixUtilisateur = 0;
 		do {
 			StringBuilder question = new StringBuilder();
-			question.append("1 - je cherche un Ã©tal.\n");
-			question.append("2 - je veux libÃ©rer mon Ã©tal.\n");
+			question.append("1 - je cherche un étal.\n");
+			question.append("2 - je veux libérer mon étal.\n");
 			question.append("3 - quitter l'application.");
 			choixUtilisateur = Clavier.entrerEntier(question.toString());
 			switch (choixUtilisateur) {
@@ -121,7 +121,7 @@ public class BoundaryLeVillage {
 			StringBuilder question = new StringBuilder();
 			question.append("1 - je veux acheter un produit.\n");
 			question.append(
-					"2 - je veux avoir une vue d'ensemble du marchÃ©.\n");
+					"2 - je veux avoir une vue d'ensemble du marché.\n");
 			question.append("3 - quitter l'application.");
 			choixUtilisateur = Clavier.entrerEntier(question.toString());
 			switch (choixUtilisateur) {

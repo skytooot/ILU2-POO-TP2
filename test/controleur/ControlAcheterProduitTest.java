@@ -63,8 +63,10 @@ class ControlAcheterProduitTest {
 		ControlAcheterProduit controlAcheterProduit = new ControlAcheterProduit(controlVerifierIdentite, controlTrouverEtalVendeur,village);
 		controlEmmenager.ajouterGaulois("Bonemine", 10);
 		controlPrendreEtal.prendreEtal("Bonemine","patate",10);
+		//assertEquals(0, controlAcheterProduit.acheterProduit("Bonemine",0));
 		assertEquals(8, controlAcheterProduit.acheterProduit("Bonemine",8));
 		assertEquals(2, controlAcheterProduit.acheterProduit("Bonemine",1000));
+		assertEquals(0, controlAcheterProduit.acheterProduit("Bonemine",1000));
 
 	}
 }
