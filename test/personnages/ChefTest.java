@@ -1,6 +1,6 @@
 package personnages;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,7 +26,8 @@ class ChefTest {
 	
 	@Test
 	void testPrendreParole() {
-		assertNotNull(abraracourcix.prendreParole());
+		String message = "Le chef Abraracourcix du village le village des irréductibles : ";
+		assertEquals(message,abraracourcix.prendreParole());
 	}
 
 }

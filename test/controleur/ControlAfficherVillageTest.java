@@ -32,12 +32,16 @@ class ControlAfficherVillageTest {
 		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
 		controlEmmenager.ajouterGaulois("Bonemine", 10);
 		controlEmmenager.ajouterDruide("Panoramix", 10, 1, 5);
-		assertNotNull(controlAfficherVillage.donnerNomsVillageois());
+		String[] tab = controlAfficherVillage.donnerNomsVillageois();
+		assertEquals("Abraracourcix",tab[0]);
+		assertEquals("Bonemine",tab[1]);
+		assertEquals("le druide Panoramix",tab[2]);
 	}
 	
 	@Test
 	void testDonnerNomVillage() {
 		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(village);
+		assertEquals("le village des irréductibles",controlAfficherVillage.donnerNomVillage());
 		assertNotNull(controlAfficherVillage.donnerNomVillage());
 	}
 	

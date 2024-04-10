@@ -27,7 +27,7 @@ class VillageTest {
 	
 	@Test
 	void testTrouverHabitant() {
-		assertNotNull(village.trouverHabitant("Abraracourcix"));
+		assertEquals(abraracourcix,village.trouverHabitant("Abraracourcix"));
 		assertNull(village.trouverHabitant("Bonemine"));
 		controlEmmenager.ajouterGaulois("Bonemine", 10);
 		assertNotNull(village.trouverHabitant("Bonemine"));

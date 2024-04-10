@@ -26,12 +26,14 @@ class PersonnageTest {
 	
 	@Test
 	void testPrendreParole() {
-		assertNotNull(benoit.prendreParole());
+		String message = "Benoit : ";
+		assertEquals(message,benoit.prendreParole());
 	}
 	
 	@Test
 	void testToString() {
-		assertNotNull(benoit.toString());
+		String message = "[nom=Benoit, force=10]";
+		assertEquals(message,benoit.toString());
 	}
 
 }

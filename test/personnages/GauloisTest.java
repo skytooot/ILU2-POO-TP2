@@ -22,12 +22,14 @@ class GauloisTest {
 	
 	@Test
 	void testPrendreParole() {
-		assertNotNull(benoit.prendreParole());
+		String message = "Le gaulois Benoit : ";
+		assertEquals(message,benoit.prendreParole());
 	}
 	
 	@Test
 	void testToString() {
-		assertNotNull(benoit.toString());
+		String message = "Gaulois [nom=Benoit, force=10, effetPotion=1]";
+		assertEquals(message,benoit.toString());
 	}
 
 }
